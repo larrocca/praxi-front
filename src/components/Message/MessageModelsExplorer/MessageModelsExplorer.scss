@@ -1,0 +1,66 @@
+@use '../../../config.scss' as Config;
+
+$titleHeight: Config.$Y3;
+$selectorHeight: Config.$Y2 + Config.$Y6;
+
+.modelsExplorerContainer {
+	height: 100%;
+	width: Config.$msgExplorerWidth;
+	border-left: solid 0.5px gray;
+	display: flex;
+	flex-direction: column;
+	align-items: center;	
+	padding: 0 ( Config.$XVH7 + Config.$XVH10 );
+
+	.title {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: $titleHeight;		
+		text-align: center;
+		font-size: Config.$XVW9 + Config.$XVW11;
+		font-weight: bold;
+		color: Config.$backgroundColorDark;
+		padding: Config.$Y4 Config.$XVW8;		
+	}
+
+	.selector {
+        display: flex;
+		flex-direction: column;
+		height: $selectorHeight;
+        justify-content: space-around;		
+		padding: Config.$Y4 0;
+		border-bottom: solid 0.5px Config.$secondaryColorDark;
+		border-top: solid 0.5px Config.$secondaryColorDark;		
+		width: 100%;
+		
+			.explorerSelect {
+                width: 100%;
+                height: Config.$YVH5 + Config.$YVH8;
+            }
+			
+			.MuiSelect-root {
+				font-size: Config.$XVW9;
+			}
+            .MuiOutlinedInput-notchedOutline {
+                border-color: rgba(0, 0, 0, 0.8) !important;
+			}
+			.MuiFormLabel-root {
+				transform: translate(14px, -6px) scale(1);
+				color: rgba(0, 0, 0, 0.59);
+			}
+			.PrivateNotchedOutline-legendLabelled-3 {
+				font-size: 1em;
+			}
+	}
+
+	.models {
+		display: flex;
+		align-items: center;
+		height: 100% - $selectorHeight - $titleHeight;
+		width: 100%;
+		padding: Config.$Y6 0;
+		flex-direction: column;		
+	}
+	
+}

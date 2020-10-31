@@ -1,0 +1,98 @@
+@use '../../config.scss' as Config;
+
+$configSpace: Config.$YVH7;
+
+.ModelPriceCommentsContainer {
+	display: flex;
+	width: 100%;
+	flex-direction: column;            
+	padding: Config.$YVH7 0;            
+	border-top: 0.5px solid Config.$backgroundColorLight;
+	border-bottom: 0.5px solid Config.$backgroundColorLight;
+
+	.UserCommentBoxContainer {
+		display: flex;
+		width: 100%;             
+		justify-content: space-around;   
+		align-items: center;
+		height: Config.$YVH4;
+		margin-bottom: Config.$YVH5;
+
+		.UserCommentBoxProfileImage {
+			display: flex;
+			height: Config.$YVH5 + Config.$YVH7;
+			width: Config.$YVH5 + Config.$YVH7;
+			margin-right: Config.$XVW9;                    
+			border-radius: 100%;
+			background-image: url("https://e.rpp-noticias.io/normal/2016/01/13/500050_62194.jpg");
+			background-size: cover;
+			background-position: center;
+		}
+
+		.UserCommentTextbox {
+			display: flex;
+			width: 100 - Config.$Y8;
+			height: 100%;
+			padding: Config.$YVH10;                    
+
+			textarea {
+				display: flex;
+				border: none;
+				padding: Config.$YVH9;
+				border-radius: Config.$YVH9;
+				height: 100%;
+				width: 100%;
+				resize: none;                        
+			}                    
+
+			textarea:focus {
+				outline: none;
+			}
+		}
+	}
+
+	.ModelPriceCommentsThreadContainer {
+		display: flex;
+		width: 100%;
+		color: white;                          
+		align-items: flex-end;
+		margin-bottom: $configSpace;
+		flex-direction: column;                
+
+		.UserCommentContainer {
+			display: flex;
+			width: 100%;                    
+			margin-bottom: Config.$YVH8;      
+			padding-left: Config.$X7;
+			justify-content: space-around;
+
+			.UserCommentBoxProfileImage {
+				display: flex;
+				height: Config.$YVH5 + Config.$YVH7;
+				width: Config.$YVH5 + Config.$YVH7;                        
+				margin-right: Config.$XVW9;
+				border-radius: 100%;
+				background-image: url("https://e.rpp-noticias.io/normal/2016/01/13/500050_62194.jpg");
+				background-size: cover;
+				background-position: center;
+			}
+
+			.UserComment {
+				display: flex;
+				width: 100%;
+				flex-direction: column;
+
+				.UserName {
+					font-weight: bold;                            
+				}
+
+				.Comment {
+					font-weight: lighter;
+				}
+			}			
+		}		
+		.UserCommentContainer:first-child {
+			padding-left: 0;                    
+		}
+	}	
+}

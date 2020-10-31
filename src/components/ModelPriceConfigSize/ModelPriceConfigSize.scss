@@ -1,0 +1,35 @@
+@use '../../config.scss' as Config;
+
+$modelPriceConfigSize: Config.$YVH4 + Config.$YVH7;
+
+.ModelPriceConfigSizeContainer {
+    display: flex;
+    height: $modelPriceConfigSize;
+    width: $modelPriceConfigSize + Config.$YVH6;
+    margin-bottom: Config.$YVH10;
+    margin-left: Config.$XVH12;
+    padding: 0 Config.$XVH8;
+    border: solid 0.5px Config.$backgroundColorLight;
+    border-radius: Config.$YVH8;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .axis {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: flex-start;        
+        font-size: Config.$YVH8 + Config.$YVH10;
+
+        .size {            
+            display: flex;
+            font-size: Config.$YVH8 + Config.$YVH11;                        
+        }
+    }
+}
+
+.ModelPriceConfigSizeContainer:hover {
+    border-color: Config.$primaryColor;
+}

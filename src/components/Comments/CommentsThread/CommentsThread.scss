@@ -1,0 +1,39 @@
+@use '../../../config.scss' as Config;
+
+$configSpace: Config.$YVH7;
+
+.UserCommentContainer {
+	display: flex;
+	width: 100%;                    
+	margin-bottom: Config.$YVH8;      
+	padding-left: Config.$X7;
+	justify-content: space-around;
+
+	.UserCommentBoxProfileImage {
+		display: flex;
+		height: Config.$YVH5 + Config.$YVH7;
+		width: Config.$YVH5 + Config.$YVH7;                        
+		margin-right: Config.$XVW9;
+		border-radius: 100%;
+		background-image: url("https://e.rpp-noticias.io/normal/2016/01/13/500050_62194.jpg");
+		background-size: cover;
+		background-position: center;
+	}
+
+	.UserComment {
+		display: flex;
+		width: 100%;
+		flex-direction: column;
+
+		.UserName {
+			font-weight: bold;                            
+		}
+
+		.Comment {
+			font-weight: lighter;
+		}
+	}			
+}		
+.UserCommentContainer:first-child {
+	padding-left: 0;                    
+}

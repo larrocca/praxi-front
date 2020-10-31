@@ -1,0 +1,27 @@
+@use '../../../config.scss' as Config;
+
+.sideBarElementContainer {
+    display: flex;
+    padding: Config.$Y5 Config.$Y5;    
+    margin: Config.$Y3 0;
+    transform: scale(1.5);
+    cursor: pointer;
+}
+
+.sideBarElementContainer:hover {
+    transform: scale(1.8);
+    animation-name: hoverSideBarElementAnim;
+    border-radius: 100%;
+    animation-duration: 0.5s;
+    background-color: Config.$primaryColorLight;
+}
+
+@keyframes hoverSideBarElementAnim {
+    from {
+        transform: scale(1.5);        
+    }
+    to {
+        transform: scale(1.8);
+        background-color: Config.$primaryColorLight;
+    }
+}

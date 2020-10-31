@@ -1,0 +1,137 @@
+@use '../../config.scss' as Config;
+
+// Configuración del header
+$profileCircleSize: Config.$YVH3 + Config.$YVH6;
+$profileCoverHeight: Config.$YVH1 + Config.$YVH6 + Config.$YVH9;
+$shelfBarHeight: Config.$YVH5;
+$shelfBarItemHeight: Config.$Y0 + Config.$Y3;
+$shelfBarItemWidth: Config.$XVW5 + Config.$XVW7;
+
+.profilePageContainer {
+    display: flex;
+    width: 100%;    
+    min-height: 100%;
+    padding: Config.$YVH7 0;
+    justify-content: center;
+    background-color: Config.$backgroundColor;    
+
+    .profileMainContainer {
+        display: flex;
+        align-items: center;
+        flex-direction: column;        
+        width: 100%;        
+        max-width: 960px;
+
+        //Configuraciones del header
+        .profileHeaderContainer {
+            display: flex;
+            position: relative;
+            width: 100%;            
+            height: $profileCoverHeight + $profileCircleSize / 2;
+            max-height: $profileCoverHeight + $profileCircleSize / 2;
+            flex-direction: column;
+            align-items: center;
+
+            .profileHeaderCover {
+                display: flex;
+                width: 100%;
+                height: $profileCoverHeight;        
+                max-height: $profileCoverHeight; 
+                background-color: white;                
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                border-radius: Config.$YVH6;
+                margin-bottom: Config.$YVH10;
+            }
+
+            .profileHeaderShelfbar {
+                display: flex;
+                width: 90%;        
+                height: $shelfBarHeight;
+                background-color: white;
+                border-radius: Config.$YVH7;
+                margin-left: Config.$X6;
+                overflow: hidden;                
+                align-items: center;
+                padding-left: Config.$X4 + Config.$X8;
+
+                .shelfBarItem {
+                    display: flex;
+                    width: $shelfBarItemWidth;
+                    height: $shelfBarItemHeight;
+                    margin-right: Config.$X9;
+                    font-weight: bold;                    
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                .shelfBarItem:hover {                    
+                    background-color: Config.$backgroundColorDark;
+                    border-radius: Config.$YVH2;
+                    color: white;
+                    font-weight: lighter;
+                    cursor: pointer;
+                    animation-name: ShelfBarItem;
+                    animation-duration: 0.5s;
+                }
+
+            }
+
+            .prifileHeaderProfile {
+                position: absolute;
+                display: flex;                
+                width: $profileCircleSize;
+                height: $profileCircleSize;
+                border: solid Config.$YVH10 + Config.$YVH14 Config.$backgroundColor;
+                border-radius: Config.$YVH0;                
+                left: Config.$X6 - Config.$X10;
+                bottom: 0;
+                background-color: white;                
+            }
+    
+        }
+
+        .profileBody {
+            display: flex;
+            width: 100%;
+            margin: Config.$YVH6 0;            
+            padding: 0 Config.$X6;
+            flex-direction: column;
+
+            .profileStatusContainer {
+                display: flex;
+                width: 100%;                
+                margin-bottom: Config.$YVH5;
+            }
+
+            .shelfConfigContainer {
+                display: flex;                
+                width: 100%;                
+                flex-direction: row;
+                justify-content: space-between;                                
+            }
+
+            .shelfModelListContainer {                
+                display: flex;
+                width: 100%;                
+                margin: Config.$YVH5 0;                
+                justify-content: space-between;
+                flex-wrap: wrap;
+            }
+
+        }
+
+    }       
+}
+
+// Animaciones
+@keyframes ShelfBarItem {
+    from {
+        background-color: white;        
+    }
+    to {
+        background-color: Config.$backgroundColorDark;
+        border-radius: Config.$YVH2;
+    }
+}

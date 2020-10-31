@@ -1,0 +1,31 @@
+@use '../../config.scss' as Config;
+
+.mainSideNavBar {
+    display: flex;
+    width: Config.$sideNavBarWidth;    
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh - Config.$headerHeight;
+    max-height: 100vh - Config.$headerHeight;
+    position: fixed;
+    background-color: Config.$primaryColorDark;
+
+    .sideBarControlsContainer {
+        display: flex;        
+        width: 70%;
+        padding: Config.$Y2 0;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .border-top-line {
+        border-top: 1px solid white;
+    }
+
+    .border-bottom-line {
+        border-bottom: 1px solid white;
+    }    
+    
+}

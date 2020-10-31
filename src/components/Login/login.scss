@@ -1,0 +1,127 @@
+@use '../../config.scss' as Config;
+$buttomradius: Config.$YVH10;
+
+.background {
+    background-color:rgba(33, 33, 33, 0.59);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    
+    
+    .login{
+    background-color: white;
+    height: Config.$YVH0;
+    flex-direction: column;
+    border-radius: Config.$YVH8;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+    
+
+  
+
+
+    .blue{
+        background-color: Config.$primaryColor;
+        padding: Config.$YVH5;
+        height: 90%;
+        border-radius: Config.$YVH8;
+        display: flex;
+        flex-direction: column;
+
+        .sesion{
+            margin-bottom: Config.$YVH8;
+            height: Config.$YVH6;
+            font-size: Config.$YVH6;
+            color: white;
+            margin-top: Config.$YVH9;
+        }
+        
+    
+    .form {
+        display:flex;
+        width: 100%;
+        justify-content: space-between;
+        
+        align-items: center;
+        flex-direction: column;
+        margin-bottom:Config.$YVH8;
+       
+        .google{
+            // margin-bottom: Config.$YVH7;
+            height: Config.$YVH6 + Config.$YVH7;
+            width: Config.$YVH1 + Config.$YVH8;
+            border: none;
+            font-size: Config.$YVH7;
+            border-radius: $buttomradius;
+            color: grey;
+        }
+        .separator{
+            margin: Config.$YVH7 0;
+            transform:scale(1.15);
+        }
+        
+        
+        
+        .inputConf {
+            display:flex;
+            width: 100%;
+            justify-content: center;
+            flex-direction: column;
+           
+        .email{
+                margin-bottom: Config.$YVH8;
+                height: Config.$YVH6 + Config.$YVH8;
+                width: Config.$YVH1 + Config.$YVH8;
+                border-radius: $buttomradius;
+                border: none;
+                padding-left: Config.$YVH8;
+                
+            }
+        .password {
+                margin-bottom: Config.$YVH7;
+                height: Config.$YVH6 + Config.$YVH8;
+                width: Config.$YVH1 + Config.$YVH8;
+                border-radius: $buttomradius;
+                border: none;
+                padding-left: Config.$YVH8;
+
+
+        }
+        .sucess {
+           
+            height: Config.$YVH6 + Config.$YVH9;
+            width: Config.$YVH3;
+            font-size: Config.$YVH8;
+            border-radius: $buttomradius;
+            border: none;
+            display: flex;
+            align-self: flex-end;
+            justify-content: center;
+            color: grey;
+         }
+            
+         
+         }
+    }
+}
+
+    
+    .bot {
+        border-bottom-left-radius: Config.$YVH8;
+        border-bottom-right-radius: Config.$YVH8;
+        background-color: white;
+        display:flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        height: Config.$Y3;
+
+    }
+    
+}
+}

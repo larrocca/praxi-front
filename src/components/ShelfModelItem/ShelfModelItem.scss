@@ -1,0 +1,65 @@
+@use '../../config.scss' as Config;
+
+.shelfModelItem {
+    display: flex;
+    width: Config.$XVW3 + Config.$XVW8;
+    height: Config.$YVH2;
+    justify-content: center;
+    align-items: center;
+    margin: Config.$YVH9;
+    border-radius: Config.$YVH9;
+    border: 0.5px solid Config.$backgroundColorLight;
+    background-image: url("https://cdn.thingiverse.com/renders/d4/0b/98/fc/b2/20150417_152951345_iOS_preview_featured.jpg");
+    background-size: cover;
+
+    .shelfModelItemControlsContainer {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        cursor: pointer;
+        padding: Config.$YVH8;    
+        flex-direction: column;
+        background-color: Config.$backgroundColorFilter;
+        border-radius: Config.$YVH7;
+        justify-content: space-between;
+        
+        .shelfModelItemControls {
+            display: flex;
+            height: 46%;
+            width: 100%;                
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        .shelfModelItemInfo {
+            display: flex;
+            height: 44%;
+            width: 100%;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;                
+            
+            .shelfModelItemInfoTitle {
+                display: flex;
+                width: 100%;                    
+                color: white;
+                font-weight: bold;
+            }
+            
+            .shelfModelItemInfoPrice {
+                color: white;
+            }
+        }
+    }
+    
+    .shelfModelItemControlsContainer:hover {
+        opacity: 1;
+    }
+}
+
+.shelfModelItem:hover {
+    border: 0.5px solid Config.$secondaryColor;
+    background-color: Config.$backgroundColorDark;
+}

@@ -1,0 +1,18 @@
+@use '../../../config.scss' as Config;
+
+.ShelfModelItemControl {
+    display: flex;
+    height: Config.$XVW7;
+    opacity: 0.8;
+    width: Config.$XVW7;
+    justify-content: center;
+    align-items: center;
+    border-radius: Config.$YVH1;
+    background-color: black;
+    cursor: pointer;
+}
+
+.ShelfModelItemControl:hover {    
+    opacity: 1;
+    transform: scale(1.1);
+}

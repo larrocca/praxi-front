@@ -1,0 +1,15 @@
+@use './config.scss' as Config;
+
+.App {
+    display: flex;
+    align-items: center;
+    flex-direction: column;    
+    min-height: 100vh;    
+}
+
+.siteContainer {
+    display: flex;
+    width: 100%;
+    height: auto;
+    margin-top: Config.$headerHeight;
+}

@@ -1,0 +1,13 @@
+@use '../../../../config.scss' as Config;
+
+//Estrellas
+
+.userStatusStars {
+    display: flex;    
+    flex-direction: row;    
+    align-items: center;    
+}
+
+.small {
+    transform: scale(0.5);
+}

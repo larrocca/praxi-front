@@ -1,0 +1,20 @@
+@use '../../config.scss' as Config;
+
+$subtitleSize: Config.$YVH7 + Config.$YVH9;
+
+.modalTextArea {
+    min-height: Config.$YVH3 !important;
+}
+
+.modalActions {
+    padding: Config.$Y7 !important;
+}
+
+.modalHeader {
+    font-size: $subtitleSize !important;
+}
+
+.warningMessage {
+    color: red;
+    margin-top: Config.$Y9;
+}

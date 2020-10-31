@@ -1,0 +1,61 @@
+@use '../../config.scss' as Config;
+
+.headerContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 10;
+    height: Config.$headerHeight;
+    padding: 0 16px;
+    background-color: Config.$backgroundColorDark;    
+    width: 100%;
+
+    .left {
+        display: flex;
+        flex-direction: row;
+        width: 400px;
+    }
+
+    .right{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 400px;
+    }
+
+    a {
+        text-decoration: none;
+        font-family: 'Open Sans';
+        font-size: 12px;
+        color: white;
+        text-transform: uppercase;
+        margin: 0 8px;
+    }
+
+    .headerDiv {
+        background-color: Config.$primaryColor;        
+        padding: Config.$Y8 0;
+        border-radius: 5px;
+        border: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;        
+    }
+
+    .headerDiv:hover {
+        animation-name: animBtnHeader;
+        animation-duration: 0.5s;
+        background-color: Config.$primaryColorDark;
+    }
+}
+
+li{
+    list-style: none;   
+}
+
+@keyframes animBtnHeader {
+    from {background-color: Config.$primaryColor}
+    to {background-color: Config.$primaryColorDark}
+}

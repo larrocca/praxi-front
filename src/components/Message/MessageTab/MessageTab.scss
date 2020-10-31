@@ -1,0 +1,14 @@
+@use '../../../config.scss' as Config;
+
+$borderRadius: 10px;
+
+.messageTabContainer {
+    display: flex;
+    height: 100%;    
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;    
+    width: Config.$msgTabWidth;
+    padding: Config.$Y8 Config.$X11;    
+    background-color: Config.$backgroundColorDark;
+}

@@ -1,0 +1,38 @@
+@use '../../config.scss' as Config;
+$selectedWidth:  Config.$Y2 + Config.$Y5;
+
+.RegisterPageContainer{    
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    max-height: 100vh;
+    flex-direction: row;
+
+        .ImgPanel {
+            width: $selectedWidth;            
+            height: 100%;
+            display: flex;            
+            background-image: url("../../assets/RegisterPage/img_workpeople.jpg");            
+            background-repeat: no-repeat;
+            background-size: cover;
+            background: linear-gradient(Config.$primaryColorFilter, Config.$primaryColorFilter),
+            url('../../assets/RegisterPage/img_workpeople.jpg');
+            border: none;
+            font-size: Config.$YVH4;
+            color: #ffffff;
+            justify-content: center;
+
+            p{
+                margin: auto;
+                margin-left: 8%;
+            }
+        }
+
+        .FormPanel {
+            padding: Config.$Y6 Config.$X5;
+            width: 100 - $selectedWidth;
+            height: 100%;
+            display: flex;
+            background-color: white;
+        }
+}

@@ -1,0 +1,31 @@
+@use '../../../config.scss' as Config;
+
+.chatContainer {
+    display: flex;
+    flex-direction: column;    
+    height: 100%;
+    min-height: 100%;
+    max-height: 100vh - Config.$headerHeight;        
+    width: 100vw - (Config.$msgTabWidth + Config.$msgExplorerWidth);    
+    justify-content: space-between;
+    align-items: center;
+    background-color: #F8F8F8;
+
+    .messageContainer {
+        display: flex;
+        height: 92%;
+        width: 100%;
+        flex-direction: column;        
+        overflow-y: scroll;
+        padding: Config.$Y8;
+    }
+
+    .messageInputContainer {        
+        height: 8%;
+        width: Config.$X0 + Config.$X2 + Config.$X4;        
+        display: flex;        
+        justify-content: center;
+        align-items: center;
+    }
+
+}

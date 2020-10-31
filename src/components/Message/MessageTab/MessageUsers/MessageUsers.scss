@@ -1,0 +1,40 @@
+@use '../../../../config.scss' as Config;
+
+.messageUser {
+    display: flex;
+    align-items: center;
+    height: Config.$Y5 + Config.$Y7;
+    width: Config.$X0 + Config.$X2 + Config.$X4;
+    border-radius: 20px;
+    border: 2px solid Config.$secondaryColorLight;
+    background-color: Config.$secondaryColor;
+    margin-top: Config.$Y7;
+    padding: 0 Config.$X5;
+    cursor: pointer;
+    
+    .userInfo {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        .userImg {
+            margin-left: Config.$X8;
+            margin-right: Config.$X5
+        }
+
+        .userText {
+            .userName {
+                color: white;
+                font-weight: inherit;
+                font-size: Config.$XVW9;
+            }
+
+            .userLastMessage {
+                color: white;
+                font-size: Config.$XVW10 + Config.$XVW13;                
+            }
+        }
+    }
+}

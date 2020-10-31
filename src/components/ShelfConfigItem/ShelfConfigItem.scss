@@ -1,0 +1,49 @@
+@use '../../config.scss' as Config;
+
+$shelConfigItemHeight: Config.$YVH5 + Config.$YVH8;
+$shelConfigItemWidth: Config.$X2;
+
+.shelfConfigItem {
+    display: flex;
+    width: $shelConfigItemWidth;
+    height: $shelConfigItemHeight;
+    flex-direction: row;                    
+    background-color: Config.$secondaryColor;
+    border-radius: Config.$XVH10;
+    cursor: pointer;
+    padding: 0 Config.$XVW8;                    
+    justify-content: space-between;
+    align-items: center;
+
+    .shelfActionIcon {                        
+        display: flex;                                                   
+        justify-content: center;
+        align-items: center;
+        transform: scale(1.5);
+    }
+
+    .shelfActionTitle {
+        display: flex;
+        width: 80%;
+        justify-content: flex-start;                        
+        color: white;
+        font-weight: normal;
+    }
+}
+
+.shelfConfigItem:hover {
+    background-color: Config.$secondaryColorDark;    
+    animation-name: ShelfConfigItemHover;
+    animation-duration: 0.3s;
+}
+
+//Animaciones
+
+@keyframes ShelfConfigItemHover {
+    from {
+        background-color: Config.$secondaryColor;
+    }
+    to {
+        background-color: Config.$secondaryColorDark;
+    }
+}

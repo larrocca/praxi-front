@@ -1,0 +1,244 @@
+@use '../../config.scss' as Config;
+
+$modelPriceConfigBorderRadius: Config.$YVH7;
+$modelPriceConfigWidth: Config.$X2 + Config.$X5;
+$modelPriceImgPrincipalSize: Config.$YVH0 + Config.$YVH4;
+
+$configSpace: Config.$YVH7;
+$ModelPriceImageCarrouselItemSize: Config.$YVH4;
+
+.ModelPriceContainer {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    padding: 0 Config.$YVH4;
+    background-color: Config.$backgroundColor;
+
+    .ModelPriceImageConfigContainer {
+        display: flex;
+        width: 100%;        
+        justify-content: flex-end;
+        margin-bottom: $configSpace;
+
+        .ModelPriceConfig {
+            display: flex;
+            width: $modelPriceConfigWidth;
+            height: 100%;
+            color: black;
+            padding: Config.$YVH6 Config.$XVW8;
+            background-color: #FAFAFA;
+            border-bottom-left-radius: $modelPriceConfigBorderRadius;
+            border-bottom-right-radius: $modelPriceConfigBorderRadius;
+            flex-direction: column;
+
+            .ModelPriceConfigTitle {
+                display: flex;
+                width: 100%;                
+                justify-content: flex-start;
+                align-items: center;                
+                font-size:Config.$YVH5;
+                height: Config.$YVH5;                
+            }
+
+            .ModelPriceConfigRate {
+                display: flex;                
+                width: 100%;
+                flex-direction: row;
+                justify-content: space-between;
+                margin-bottom: $configSpace;
+                padding: $configSpace 0;
+                border-bottom: 0.5px solid Config.$backgroundColorLight;
+            }
+
+            .ModelPriceConfigOwnerStatus {
+                display: flex;
+                width: 100%;
+                margin-bottom: $configSpace;
+                border-top: solid 0.5px Config.$backgroundColorLight;
+                border-bottom: solid 0.5px Config.$backgroundColorLight;
+                padding: Config.$YVH8 0;
+            }
+
+            .ModelPriceConfigItemContainer {
+                display: flex;
+                width: 100%;
+                flex-direction: column;
+                margin-bottom: $configSpace;
+
+                .ModelPriceConfigItemTitle {
+                    display: flex;
+                    font-size: Config.$YVH7 + Config.$YVH9;
+                    font-weight: 700;
+                    margin-bottom: Config.$YVH8;                    
+                }
+
+                .ModelPriceConfigSizesItemsContaines {
+                    display: flex;
+                    width: 100%;                    
+                    justify-content: flex-start;                    
+                    flex-wrap: wrap;                    
+                }
+
+                .ModelPriceConfigColorsContaines {
+                    display: flex;
+                    width: 100%;
+                    margin-bottom: $configSpace;
+                    flex-direction: column;                    
+
+                    .modelConfigSelector {
+                        margin: Config.$YVH9 0;
+                        .MuiSelect-root,
+						.MuiFormLabel-root,
+						.MuiOutlinedInput-notchedOutline {
+							color: black !important;
+							border-color: Config.$backgroundColorLight !important;
+						}
+                    }                    
+                }                                
+            }
+            
+            .ModelPriceConfigQuantity {
+                display: flex;
+                width: 100%;
+                margin-bottom: $configSpace;
+
+                .ModelPriceConfigQuantityInput {                        
+                    width: 100%;
+                    border-color: black;
+                }
+            }
+
+            .ModelPriceConfigPrice {
+                display: flex;
+                width: 100%;                    
+                height: Config.$YVH4;
+                margin-bottom: $configSpace;
+                font-weight: lighter;
+                font-size: Config.$YVH4;                
+                justify-content: flex-start;
+                align-items: center;                
+            }
+
+            .ModelPriceConfigPrintButton {                
+                display: flex;
+                width: 100%;
+                justify-content: center;
+                align-items: center;
+                color: white;
+                height: Config.$YVH5 + Config.$YVH8;
+                text-transform: uppercase;
+                cursor: pointer;
+                background-color: Config.$primaryColor;
+                border-radius: Config.$YVH8;
+                margin-bottom: Config.$YVH9;
+            }
+
+            .ModelPriceConfigAddCartButton {
+                display: flex;
+                width: 100%;
+                justify-content: center;
+                color: white;
+                align-items: center;
+                height: Config.$YVH5 + Config.$YVH8;
+                cursor: pointer;
+                text-transform: uppercase;
+                background-color: Config.$primaryColorDark;
+                border-radius: Config.$YVH8;
+            }
+        }
+
+        .ModelPriceImage {
+            display: flex;            
+            width: 100% - $modelPriceConfigWidth;            
+            flex-direction: column;
+            padding: Config.$X8 Config.$X8 0 0;
+
+            .ModelPriceImagePrincipalImg {
+                display: flex;
+                width: 100%;
+                height: $modelPriceImgPrincipalSize;            
+                background-color: Config.$backgroundColor;
+                border-radius: Config.$YVH10;
+                border: 0.5px solid Config.$backgroundColorLight;
+                //background-image: url("https://cdn.thingiverse.com/renders/d4/0b/98/fc/b2/20150417_152951345_iOS_preview_featured.jpg");
+                background-size: fit;
+                background-position: center;
+                background-repeat: no-repeat;                
+                margin-bottom: Config.$YVH9;
+            }
+
+            .ModelPriceImageCarrouselContainer {
+                display: flex;
+                width: 100%;
+                height: Config.$YVH4;
+                flex-direction: row;                
+
+                .ModelPriceImageCarrouselItem {
+                    display: flex;
+                    margin-right: Config.$YVH9;
+                    border-radius: Config.$YVH10;
+                    cursor: pointer;
+                    width: $ModelPriceImageCarrouselItemSize;
+                    height: $ModelPriceImageCarrouselItemSize;
+                    background-color: Config.$backgroundColor;                             
+                    border: 0.5px solid Config.$backgroundColorLight;
+                }
+                
+                .ModelPriceImageCarrouselItem:hover {
+                    border-color: Config.$primaryColor;
+                }
+
+            }
+
+            .ModelPriceUserProfile {
+                display: flex;
+                width: 100%;
+                flex-direction: column;
+                padding: Config.$YVH6 0;
+                
+                .ModelPriceUserProfileTitle {
+                    display: flex;
+                    color: white;
+                    font-size: Config.$YVH6 + Config.$YVH9;
+                    margin-bottom: Config.$YVH6;
+                }
+
+                .ModelPriceUserProfileStatus {
+                    display: flex;
+                    height: Config.$YVH4 + Config.$YVH6;
+                }
+                
+            }
+        }
+
+    }
+
+    .ModelPriceDescriptionContainer {
+        display: flex;
+        width: 100% - $modelPriceConfigWidth;
+        margin-bottom: $configSpace;
+        flex-direction: column;
+        padding-right: Config.$X8;        
+
+        .ModelPriceDescription {
+            display: flex;
+            width: 100%;
+            margin-bottom: $configSpace;
+            color: #FAFAFA;
+        }        
+    }
+
+    .ModelPriceRecommendedModels {
+        display: flex;
+        width: 100%;
+        border-top-right-radius: Config.$YVH7;
+        border-top-left-radius: Config.$YVH7;
+        background-color: #FAFAFA;
+        justify-content: center;
+        height: 400px;
+        padding: Config.$YVH7 Config.$YVH7;
+        flex-wrap: wrap;
+    }
+}
+

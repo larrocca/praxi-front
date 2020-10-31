@@ -1,0 +1,37 @@
+@use '../../config.scss' as Config;
+$selectedWidth:  Config.$Y2 + Config.$Y5;
+
+.optionRegContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    
+    .conditionalContainer{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .separatorProps{
+        display: flex;
+        justify-content: center;
+        margin: Config.$YVH4 0;
+    }
+
+    p{
+        font-size: Config.$Y0 +20;
+    }
+    
+    .divButton{
+        display: flex;
+        justify-content: center;
+        
+
+        .buttonProps{
+            margin-top: Config.$Y5;
+            width: Config.$X1 ;
+        }
+    }
+}

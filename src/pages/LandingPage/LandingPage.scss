@@ -1,0 +1,392 @@
+@use '../../config.scss' as Config;
+
+$titleSize: Config.$YVH4 - Config.$YVH8;
+$subtitleSize: Config.$YVH7 + Config.$YVH9;
+
+.landingPageContainer {
+	display: flex;
+	width: 100%;
+	flex-direction: column;
+	background-color: Config.$backgroundColorDark;
+	
+	&:focus {
+		outline: none;
+	}
+
+	.mainPanel {
+		height: Config.$YVH0 + Config.$YVH3;
+		background-color: Config.$backgroundColor;
+		position: relative;
+		display: flex;
+		flex-direction: column;
+
+		.mainPanelText {
+			margin-top: Config.$Y6;
+			display: flex;
+			flex-direction: column;
+			.mainPanelTitle {
+				text-align: center;
+				color: white;
+				font-size: $titleSize;
+				font-weight: 400;
+				margin-bottom: Config.$Y9;
+			}
+			.mainPanelSubTitle {
+				text-align: center;
+				font-size: $subtitleSize;
+				color: #d1d1d1;
+			}
+		}
+
+		.mainPanelButton {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+
+			.mainPanelButtonInner {
+				background-color: Config.$primaryColor;
+				padding: 5px;
+				border-radius: 5px;
+				border: none;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				width: Config.$X3 + Config.$X6 + Config.$X7;
+				height: Config.$YVH5;
+				margin-top: Config.$Y7 + Config.$X9;
+
+				label {
+					width: 100%;
+					text-align: center;
+					text-decoration: none;
+					font-family: 'Open Sans';
+					font-size: Config.$YVH7 - Config.$YVH14;
+					color: white;
+					text-transform: uppercase;
+					margin: 0 8px;
+				}
+
+				label:hover {
+					cursor: pointer;
+				}
+			}
+
+			.modelButton {
+				cursor: pointer;
+				color: #ffff;
+				font-size: Config.$YVH7 - Config.$YVH14;
+				margin-top: 8px;
+			}
+		}
+
+		.mainPanelModelViewer {
+			height: 100%;
+			width: 100%;
+
+			.modelTitle {
+				position: absolute;
+				top: Config.$XVH7;
+				font-size: Config.$XVH5 + Config.$XVH8;
+				font-weight: 600;
+				left: Config.$XVH4 + Config.$XVH10;
+				width: Config.$X2;
+				color: white;
+			}
+
+			.modelConfigContainer {
+				position: absolute;
+				height: 100%;
+				display: flex;
+				align-items: flex-end;
+				left: Config.$XVH4 + Config.$XVH10;
+				bottom: Config.$YVH5 + Config.$YVH7;
+
+				.modelConfig {
+					height: Config.$Y0 + Config.$Y5 !important;
+					display: flex;
+					flex-direction: column;
+					justify-content: space-between;
+					height: Config.$YVH0 - Config.$YVH8;
+					width: Config.$XVW4 + Config.$XVW5;
+
+					.modelConfigSelector {
+                        .MuiSelect-root,
+						.MuiFormLabel-root,
+						.MuiOutlinedInput-notchedOutline {
+							color: white !important;
+							border-color: white !important;
+						}
+                    }
+
+					.colorPickerContainer {
+						display: flex;
+						justify-content: center;
+                    }
+                    
+                    .modelConfigTextField {
+                        .MuiInputBase-input,
+                        .MuiFormLabel-root,
+                        .MuiOutlinedInput-notchedOutline {
+                            color: white;
+                            border-color: white;
+                        }
+                    }
+				}
+			}
+
+			.modelInfoContainer {
+                position: absolute;
+                height: 100%;
+				display: flex;
+				align-items: flex-end;
+				right: Config.$XVH4 + Config.$XVH10;
+				bottom: Config.$YVH5 + Config.$YVH7;
+
+				.modelInfo {
+					height: Config.$Y0 + Config.$Y3 + Config.$Y6;
+					width: Config.$XVW4 + Config.$XVW5;
+					display: flex;
+					flex-direction: column;
+					justify-content: space-between;
+
+					.modelCloseIcon {
+						color: white;
+                        display: flex;
+                        justify-content: flex-end;
+						.closeIcon {
+						    transform: scale(3);
+						}
+                    }
+                    
+                    .modelCloseIcon:hover {
+                        cursor: pointer;
+                    }
+
+					.infoText {
+						color: white;
+						line-height: Config.$Y0 + Config.$Y0 + Config.$Y1;
+						font-size: Config.$Y0 + Config.$Y0 + Config.$Y10;
+					}
+
+					.infoButton {
+						background-color: Config.$primaryColor;
+						padding: 5px;
+						border-radius: 5px;
+						border: none;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						width: 100%;
+						font-size: Config.$X0 + Config.$X0 + Config.$X3;
+						height: Config.$YVH5;
+                    }
+                    
+                    .infoButton:hover, label:hover {
+                        cursor: pointer;
+                    }
+				}
+			}
+		}
+
+		.mainPanelButton:hover {
+			cursor: pointer;
+		}
+
+		.mainPanelImage {
+			position: absolute;
+			left: 0;
+			right: 0;
+			text-align: center;
+			top: 73%;
+			.octopusLogo {
+				opacity: 0.5;
+			}
+		}
+	}
+
+	.secondPanel {
+		height: Config.$YVH3;
+		position: relative;
+		text-align: center;
+		width: 100%;
+		.secondPanelText {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+
+			.secondPanelTitle {
+				margin: 0;
+				color: #ffff;
+				padding-top: 2%;
+				font-size: $titleSize;
+			}
+
+			.secondPanelSubTitle {
+				margin: 0;
+				padding-top: 15px;
+				color: #d1d1d1;
+				font-size: $subtitleSize;
+			}
+		}
+	}
+
+	.thirdPanel {
+		height: Config.$YVH1 + Config.$YVH3;
+		background-color: white;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		padding: Config.$Y6 Config.$X3;
+
+		.thirdPanelModel {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: space-between;
+			height: Config.$Y0 + Config.$Y2;
+			width: Config.$X2;
+
+			.radiusButton {
+				height: 13%;
+				width: 12.5%;
+				border-radius: 50%;
+				background-color: Config.$primaryColorDark;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				margin-bottom: 1%;
+				.radiusNumber {
+					font-size: Config.$Y0 + Config.$Y1;
+					color: white;
+				}
+			}
+
+			.modelTitleContainer {
+				height: 30%;
+				width: 100%;
+				display: flex;
+				justify-content: center;
+				align-items: flex-start;
+
+				.modelTitle {
+					font-size: 150%;
+					font-weight: bold;
+					text-align: center;
+				}
+			}
+
+			.modelLogoContainer {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				height: 38%;
+				.modelLogo {
+					margin: 49px 0;
+				}
+			}
+
+			.modelTextContainer {
+				display: flex;
+				justify-content: center;
+				align-items: flex-start;
+				height: 20%;
+				.modelText {
+					margin: 0;
+					font-size: 90%;
+					font-weight: 500;
+					color: Config.$backgroundColorLight;
+					text-align: center;
+				}
+			}
+		}
+	}
+
+	.fourthPanel {
+		width: 100%;
+		height: Config.$YVH1 + Config.$YVH4;
+		background-image: url("../../assets/LandingPage/work.JPG");
+		background-size: cover;
+		padding: Config.$Y7 Config.$Y6;
+
+		.fourthPanelInnerContainer {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+
+			.fourthPanelTitle {
+				color: white;
+				font-size: $titleSize;
+			}
+
+			.fourthPanelSubTitle {
+				color: white;
+				font-size: Config.$Y0 * 2;
+				margin-top: 0.8047%;
+			}
+
+			.fourthPanelButton {
+				display: flex;
+				justify-content: flex-end;
+				margin-top: Config.$Y7;
+			}
+		}
+	}
+
+	.fifthPanel {
+		width: 100%;
+		height: Config.$YVH1;
+		background: linear-gradient(Config.$primaryColorFilter, Config.$primaryColorFilter),
+			url('../../assets/LandingPage/work_2.jpg');
+		background-size: cover;
+		padding: Config.$Y7 Config.$Y6;
+
+		.fifthPanelInnerContainer {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+		}
+
+		.fifthPanelTitle {
+			color: white;
+			font-size: Config.$XVH5;
+			margin: 0;
+		}
+
+		.fifthPanelSubTitle {
+			color: white;
+			font-size: Config.$Y0 * 2;
+			margin-top: 0.8047%;
+		}
+
+		.fifthPanelButton {
+			margin-top: Config.$Y8;
+		}
+	}
+
+	.footerPanel {
+		height: Config.$YVH3;
+	}
+
+	.triangleContainer {
+		display: flex;
+		justify-content: center;
+		width: 100%;
+		background-color: #ffff;
+
+		.triangleSvg {
+			width: 100%;
+			height: 100%;
+		}
+
+		.dark {
+			background-color: Config.$backgroundColorDark;
+		}
+	}
+
+	.hide {
+		display: none;
+	}
+}
